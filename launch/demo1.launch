@@ -1,0 +1,20 @@
+<!-- <launch>
+    <node pkg="learning_topic" type="person_subscriber" name="talker" output="screen" />
+    <node pkg="learning_topic" type="person_publisher" name="listener" output="screen" /> 
+</launch> -->
+
+
+<launch>     
+    <!-- run turtlesim -->
+    <node pkg="turtlesim" type="turtlesim_node" name="turtlesim">
+    </node>
+    <!-- run learning_topic -->
+    <node pkg="learning_topic" type="velocity_publisher" name="velocity_pub" output="screen">
+      <!-- <param name="twist_name" value="/turtle1/cmd_vel" /> -->
+    </node>
+
+    <node pkg="learning_topic" type="pose_subscriber" name="pose_sub" output="screen">
+      <!-- <param name="twist_name" value="/turtle1/cmd_vel" /> -->
+    </node>
+
+</launch>

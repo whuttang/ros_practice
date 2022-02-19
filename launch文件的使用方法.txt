@@ -1,0 +1,5 @@
+方式1：roslaunch  <launch文件的绝对路径>
+roslaunch launch/demo1.launch
+
+方式2：roslaunch  <包名> <包下面的launch文件>
+roslaunch learning_topic demo2.launch 
